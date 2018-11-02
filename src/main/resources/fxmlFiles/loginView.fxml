@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane id="loginScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesheets/stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewControllers.LoginController">
+   <center>
+       <VBox id="loginBackground" alignment="CENTER" minWidth="0.0" prefHeight="189.0" prefWidth="0.0" spacing="10.0" BorderPane.alignment="CENTER">
+           <BorderPane.margin>
+               <Insets bottom="115.0" left="150.0" right="150.0" top="85.0" />
+           </BorderPane.margin>
+           <padding>
+               <Insets bottom="20.0" left="30.0" right="30.0" top="10.0" />
+           </padding>
+          <children>
+              <Label alignment="CENTER" prefHeight="17.0" prefWidth="600.0" text="Login" textFill="WHITE">
+                  <font>
+                      <Font size="22.0" />
+                  </font>
+                  <VBox.margin>
+                      <Insets />
+                  </VBox.margin>
+              </Label>
+              <TextField fx:id="usernameField" prefHeight="34.0" prefWidth="198.0" promptText="Username" styleClass="loginField">
+                  <VBox.margin>
+                      <Insets />
+                  </VBox.margin>
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+                  <opaqueInsets>
+                      <Insets />
+                  </opaqueInsets>
+              </TextField>
+              <PasswordField fx:id="passwordField" promptText="Password" styleClass="loginField">
+                  <VBox.margin>
+                      <Insets />
+                  </VBox.margin>
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </PasswordField>
+              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                 <children>
+                     <Button mnemonicParsing="false" onAction="#handleButtonSignUp" styleClass="loginButton" text="Sign Up" textFill="WHITE" />
+                     <Button mnemonicParsing="false" onAction="#handleButtonLogin" styleClass="loginButton" text="Sign in" textFill="WHITE" />
+                 </children>
+              </HBox>
+          </children>
+       </VBox>
+   </center>
+   <top>
+      <Label id="title" text="Keyword Keeper" textFill="WHITE" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+      </Label>
+   </top>
+</BorderPane>

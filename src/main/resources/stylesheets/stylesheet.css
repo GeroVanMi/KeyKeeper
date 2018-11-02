@@ -1,0 +1,38 @@
+#loginScreen{
+    -fx-background-image: url("../images/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 610 410;
+    -fx-background-position: center center;
+}
+
+#loginBackground {
+    -fx-background-color: rgba(0, 0, 0, 0.75);
+    -fx-background-radius: 50px 25px 50px 25px;
+    -fx-border-radius: 50px 25px 50px 25px;
+    -fx-border-color: rgba(90, 80, 80, 1);
+    -fx-border-width: 2px;
+}
+
+#title {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-background-radius: 5px 15px 5px 15px;
+    -fx-border-radius: 5px 15px 5px 15px;
+    -fx-border-color: rgba(90, 80, 80, 1);
+    -fx-border-width: 2px;
+}
+
+.loginField {
+    -fx-background-color: rgba(75, 75, 75, 0.6);
+    -fx-text-fill: rgba(255, 255, 255, 1);
+    -fx-background-radius: 100px;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.9);
+}
+
+.loginButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(200, 200, 200, 1);
+}
+
+.loginButton:hover {
+    -fx-text-fill: rgba(50, 150, 255, 1);
+}
