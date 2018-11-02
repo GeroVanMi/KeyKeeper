@@ -9,7 +9,7 @@ public class User {
     public User(String name, String password) {
         this.name = name;
         this.password = password;
-        this.entries = new ArrayList<Entry>();
+        this.entries = new ArrayList<>();
     }
 
     public void createEntry(String website, String password, String username) {
