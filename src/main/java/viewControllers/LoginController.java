@@ -6,13 +6,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import models.User;
 import xmlHandling.Reader;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -29,15 +29,20 @@ public class LoginController extends ViewController {
         String password = passwordField.getText();
         CryptionManager cm = new CryptionManager(password);
 
-        // TODO: Read User from XML-File and compare PW-Field
         Reader reader = new Reader("src/main/resources/xml/passwords.xml");
         ArrayList<User> userList = reader.readAllUser();
         for(User user : userList) {
             if(usernameField.getText().equals(user.getName())) {
-                if(cm.encrypt(password.toCharArray(), "1234".getBytes()).equals(user.getPassword())) {
+                if(cm.encrypt(password).equals(user.getPassword())) {
                     Button btn = (Button) e.getSource();
                     Stage stage = (Stage) btn.getScene().getWindow();
                     loadScreen("/fxmlFiles/listView.fxml", e, user);
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Password incorrect");
+                    alert.setContentText("Wrong Password.");
+                    alert.showAndWait();
                 }
             }
         }

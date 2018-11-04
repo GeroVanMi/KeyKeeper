@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 
 public class SignUpController extends ViewController {
+
     @FXML
     private TextField username, mail;
 
@@ -35,5 +36,4 @@ public class SignUpController extends ViewController {
         Stage stage = (Stage)btn.getScene().getWindow();
         loadScreen("/fxmlFiles/loginView.fxml", e);
     }
-
 }
