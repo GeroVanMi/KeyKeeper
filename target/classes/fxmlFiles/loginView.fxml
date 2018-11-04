@@ -42,10 +42,10 @@
                   </font>
               </PasswordField>
               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
-                 <children>
-                     <Button mnemonicParsing="false" onAction="#handleButtonSignUp" styleClass="loginButton" text="Sign Up" textFill="WHITE" />
-                     <Button mnemonicParsing="false" onAction="#handleButtonLogin" styleClass="loginButton" text="Sign in" textFill="WHITE" />
-                 </children>
+                  <Button mnemonicParsing="false" onAction="#handleButtonSignUp" styleClass="loginButton" text="Sign Up"
+                          textFill="WHITE"/>
+                  <Button mnemonicParsing="false" onAction="#handleButtonLogin" styleClass="loginButton" text="Sign in"
+                          textFill="WHITE"/>
               </HBox>
           </children>
        </VBox>

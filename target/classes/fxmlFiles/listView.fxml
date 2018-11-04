@@ -10,33 +10,29 @@
          <children>
             <HBox alignment="CENTER_LEFT" spacing="15.0">
                <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
                </padding>
-               <children>
-                  <Label text="Keyword Keeper">
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                     <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Button mnemonicParsing="false" text="Create New">
-                     <HBox.margin>
-                        <Insets left="265.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" text="Help">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Button>
-               </children>
+               <Label text="Keyword Keeper">
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                  </padding>
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                  </HBox.margin>
+               </Label>
+               <Button mnemonicParsing="false" text="Create New">
+                  <HBox.margin>
+                     <Insets left="265.0"/>
+                  </HBox.margin>
+               </Button>
+               <Button mnemonicParsing="false" text="Help">
+                  <HBox.margin>
+                     <Insets/>
+                  </HBox.margin>
+               </Button>
             </HBox>
             <TitledPane expanded="false" text="Page 0">
-               <content>
-                  <Label text="Password 0" />
-               </content>
+               <Label text="Password 0"/>
             </TitledPane>
             <TitledPane expanded="false" text="Page 1">
                <content>
@@ -44,15 +40,12 @@
                </content>
             </TitledPane>
             <TitledPane expanded="false" text="Page 2">
-               <content>
-                  <Label text="Password 2" />
-               </content>
+               <Label text="Password 2"/>
             </TitledPane>
          </children>
       </VBox>
    </content>
    <stylesheets>
-      <URL value="@../stylesheet.css" />
       <URL value="@../stylesheets/stylesheet.css" />
    </stylesheets>
 </ScrollPane>

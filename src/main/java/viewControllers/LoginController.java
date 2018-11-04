@@ -34,10 +34,9 @@ public class LoginController extends ViewController {
         ArrayList<User> userList = reader.readAllUser();
         for(User user : userList) {
             if(usernameField.getText().equals(user.getName())) {
-                if(password.equals(user.getPassword())) {
+                if(cm.encrypt(password.toCharArray(), "1234".getBytes()).equals(user.getPassword())) {
                     Button btn = (Button) e.getSource();
                     Stage stage = (Stage) btn.getScene().getWindow();
-
                     loadScreen("/fxmlFiles/listView.fxml", e, user);
                 }
             }
