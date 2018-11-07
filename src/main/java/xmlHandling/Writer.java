@@ -61,7 +61,7 @@ public class Writer {
         for(User user : userList) {
             saveUser(user);
         }
-    }
+}
 
     public void saveChanges() {
         try {

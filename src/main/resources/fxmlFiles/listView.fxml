@@ -30,7 +30,7 @@
                         <Insets left="265.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" styleClass="listButton" text="Help">
+                  <Button mnemonicParsing="false" onAction="#handleButtonHelp" styleClass="listButton" text="Help">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>

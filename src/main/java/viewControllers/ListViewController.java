@@ -4,6 +4,7 @@ package viewControllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
 import javafx.scene.input.KeyCode;
@@ -55,6 +56,10 @@ public class ListViewController extends ViewController {
 
     @FXML
     public void handleButtonHelp(ActionEvent e) {
-        // TODO: Open box with help commands
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
+        alert.setHeaderText("How to use KeyKeeper:");
+        alert.setContentText("With the Button 'Create New' you are able to add a Website with your Username and your Password.");
+        alert.showAndWait();
     }
 }
