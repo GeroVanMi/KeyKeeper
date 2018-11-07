@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import models.User;
 import xmlHandling.Reader;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -31,20 +32,19 @@ public class LoginController extends ViewController {
 
         Reader reader = new Reader("src/main/resources/xml/passwords.xml");
         ArrayList<User> userList = reader.readAllUser();
-        for(User user : userList) {
-            if(usernameField.getText().equals(user.getName())) {
-                if(cm.encrypt(password).equals(user.getPassword())) {
-                    Button btn = (Button) e.getSource();
-                    Stage stage = (Stage) btn.getScene().getWindow();
-                    loadScreen("/fxmlFiles/listView.fxml", e, user);
-                } else {
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Error");
-                    alert.setHeaderText("Password incorrect");
-                    alert.setContentText("Wrong Password.");
-                    alert.showAndWait();
-                }
+        for (User user : userList) {
+            if (usernameField.getText().equals(user.getName()) && cm.encrypt(password).equals(user.getPassword())) {
+                Button btn = (Button) e.getSource();
+                Stage stage = (Stage) btn.getScene().getWindow();
+                loadScreen("/fxmlFiles/listView.fxml", e, user);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Password incorrect");
+                alert.setContentText("Wrong Password.");
+                alert.showAndWait();
             }
+
         }
     }
 
