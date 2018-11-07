@@ -16,9 +16,6 @@
       <VBox id="listBackground" fx:id="contentBox" prefHeight="398.0" prefWidth="598.0">
          <children>
             <HBox alignment="CENTER_LEFT" spacing="15.0">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
                <children>
                   <Label styleClass="title" text="Keyword Keeper" textFill="#f2f2f2">
                      <padding>
@@ -28,7 +25,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Button mnemonicParsing="false" text="Create New">
+                  <Button mnemonicParsing="false" styleClass="listButton" text="Create New">
                      <HBox.margin>
                         <Insets left="265.0" />
                      </HBox.margin>
@@ -39,6 +36,9 @@
                      </HBox.margin>
                   </Button>
                </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
             </HBox>
             <TitledPane expanded="false" styleClass="listItem" text="youtube.de">
                <content>
