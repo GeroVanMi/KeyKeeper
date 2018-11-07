@@ -59,7 +59,7 @@ public class ListViewController extends ViewController {
         Parent root;
         try {
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("entryCreation.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxmlFiles/entryCreation.fxml"));
             root = loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);

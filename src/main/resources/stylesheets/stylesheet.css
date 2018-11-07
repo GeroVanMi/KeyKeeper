@@ -69,3 +69,11 @@
     -fx-background-color: transparent;
     -fx-text-fill: rgba(242, 242, 242, 1);
 }
+
+.loginButton:hover {
+    -fx-text-fill: rgba(50, 150, 255, 1);
+}
+
+.loginButton:focused {
+    -fx-text-fill: rgba(50, 150, 255, 1);
+}
