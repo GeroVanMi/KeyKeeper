@@ -1,4 +1,4 @@
-#loginScreen{
+#loginScreen {
     -fx-background-image: url("../images/background.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: 610 410;
@@ -30,9 +30,37 @@
 
 .loginButton {
     -fx-background-color: transparent;
-    -fx-text-fill: rgba(200, 200, 200, 1);
+    -fx-text-fill: rgba(242, 242, 242, 1);
+}
+
+.loginButton:focused {
+    -fx-text-fill: rgba(50, 150, 255, 1);
 }
 
 .loginButton:hover {
     -fx-text-fill: rgba(50, 150, 255, 1);
+}
+
+#listBackground {
+    -fx-background-image: url("../images/background2.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1920 1080;
+    -fx-background-position: center center;
+}
+
+.listItem {
+    -fx-text-fill: rgba(242, 242, 242, 1);
+    -fx-border-color: null;
+}
+
+.listItem * {
+    -fx-background-color: transparent;
+}
+
+.itemBox * {
+    -fx-text-fill: rgba(242, 242, 242, 1);
+}
+
+.listLabel {
+    -fx-text-fill: rgba(242, 242, 242, 1);
 }

@@ -34,8 +34,16 @@ public class Reader {
         NodeList userList = document.getElementsByTagName("user");
         ArrayList<User> userArrayList = new ArrayList<>();
         for(int i = 0; i < userList.getLength(); i++) {
-            Element user = (Element)userList.item(i);
-            userArrayList.add(new User(getValueOfSingleChild(user, "username"), getValueOfSingleChild(user, "password")));
+            Element userElem = (Element)userList.item(i);
+            User user = new User(getValueOfSingleChild(userElem, "username"), getValueOfSingleChild(userElem, "password"));
+            NodeList entryList = userElem.getElementsByTagName("entry");
+            for(int j = 0; j < entryList.getLength(); j++) {
+                String website = getValueOfSingleChild((Element)entryList.item(j), "website");
+                String password = getValueOfSingleChild((Element)entryList.item(j), "password");
+                String username = getValueOfSingleChild((Element)entryList.item(j), "username");
+                user.createEntry(website, password, username);
+            }
+            userArrayList.add(user);
         }
         return userArrayList;
     }

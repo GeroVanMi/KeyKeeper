@@ -57,7 +57,7 @@ public class CryptionManager {
 
             Base64.Encoder encoder = Base64.getEncoder();
             return encoder.encodeToString(ciphertext);
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException | InvalidKeyException | NoSuchPaddingException | UnsupportedEncodingException | BadPaddingException | IllegalBlockSizeException | InvalidParameterSpecException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;

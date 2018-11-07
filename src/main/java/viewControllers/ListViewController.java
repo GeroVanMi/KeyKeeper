@@ -4,9 +4,12 @@ package viewControllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Label;
+import javafx.scene.control.TitledPane;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.VBox;
+import models.Entry;
 import models.User;
 
 public class ListViewController extends ViewController {
@@ -14,7 +17,7 @@ public class ListViewController extends ViewController {
     private User currentUser;
 
     @FXML
-    private ScrollPane scrollPane;
+    private VBox contentBox;
 
     public ListViewController() {
     }
@@ -27,6 +30,22 @@ public class ListViewController extends ViewController {
             }
         });
         currentUser = user;
+        for(Entry e : currentUser.getEntries()) {
+            Label username = new Label(e.getUsername());
+            username.getStyleClass().add("listLabel");
+
+            Label password = new Label(e.getPassword());
+            password.getStyleClass().add("listLabel");
+
+            VBox box = new VBox(username, password);
+            box.getStyleClass().add("listBox");
+
+            TitledPane titledPane = new TitledPane(e.getWebsite(), box);
+            titledPane.getStyleClass().add("listItem");
+            titledPane.setAnimated(true);
+            titledPane.setExpanded(false);
+            contentBox.getChildren().add(titledPane);
+        }
     }
 
     @FXML

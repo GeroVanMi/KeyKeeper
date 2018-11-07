@@ -30,7 +30,7 @@
 
 .loginButton {
     -fx-background-color: transparent;
-    -fx-text-fill: rgba(200, 200, 200, 1);
+    -fx-text-fill: rgba(242, 242, 242, 1);
 }
 
 .loginButton:focused {
@@ -44,8 +44,13 @@
 #listBackground {
     -fx-background-image: url("../images/background2.jpg");
     -fx-background-repeat: stretch;
-    -fx-background-size: 610 410;
+    -fx-background-size: 1920 1080;
     -fx-background-position: center center;
+}
+
+.listItem {
+    -fx-text-fill: rgba(242, 242, 242, 1);
+    -fx-border-color: null;
 }
 
 .listItem * {
@@ -53,6 +58,9 @@
 }
 
 .itemBox * {
-    -fx-text-fill: rgba(200, 200, 200, 1);
-    -fx-border-color: transparent;
+    -fx-text-fill: rgba(242, 242, 242, 1);
+}
+
+.listLabel {
+    -fx-text-fill: rgba(242, 242, 242, 1);
 }
