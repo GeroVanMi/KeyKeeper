@@ -69,3 +69,11 @@
     -fx-background-color: transparent;
     -fx-text-fill: rgba(242, 242, 242, 1);
 }
+
+.listButton:hover {
+    -fx-text-fill: rgba(50, 150, 255, 1);
+}
+
+.listButton:focused {
+    -fx-text-fill: rgba(50, 150, 255, 1);
+}

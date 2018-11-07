@@ -70,10 +70,10 @@
     -fx-text-fill: rgba(242, 242, 242, 1);
 }
 
-.loginButton:hover {
+.listButton:hover {
     -fx-text-fill: rgba(50, 150, 255, 1);
 }
 
-.loginButton:focused {
+.listButton:focused {
     -fx-text-fill: rgba(50, 150, 255, 1);
 }

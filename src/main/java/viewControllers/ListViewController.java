@@ -3,20 +3,14 @@ package viewControllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import models.Entry;
 import models.User;
-
-import java.io.IOException;
 
 public class ListViewController extends ViewController {
 
@@ -56,17 +50,7 @@ public class ListViewController extends ViewController {
 
     @FXML
     public void handleButtonNew(ActionEvent e) {
-        Parent root;
-        try {
-            Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxmlFiles/entryCreation.fxml"));
-            root = loader.load();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            System.err.println(ex);
-        }
+        loadScreen("/fxmlFiles/entryCreation.fxml", e, currentUser);
     }
 
     @FXML

@@ -28,15 +28,14 @@ public class EntryCreationController {
     @FXML
     public void handleButtonSubmit(ActionEvent e) {
 
-        if(websiteInput.getText() != null || usernameInput.getText() != null || passwordInput.getText() != null) {
-            // TODO: Add entry
-
-        }
-        else {
+        if(websiteInput.getText().isEmpty() || usernameInput.getText().isEmpty() || passwordInput.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all fields.", ButtonType.OK);
             alert.setTitle("Error");
             alert.setHeaderText("Field(s) empty!");
             alert.showAndWait();
+        }
+        else {
+            // TODO: Add entry
         }
     }
 
